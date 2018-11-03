@@ -15,7 +15,7 @@ Request
 	    "message_content":"welcome",
 	    "timestamp": "2018-08-21 12:50:16.234"
     }]
-Reponse
+Response
 
     staus: 200 OK
     {
