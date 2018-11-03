@@ -1,0 +1,16 @@
+{
+  "name": "messagepostapp",
+  "dependencies": {
+    "knex": "^0.15.2",
+    "pg": "^7.6.0"
+  },
+  "version": "1.0.0",
+  "description": "pure node js for posting information into db",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karthik",
+  "license": "MIT"
+}
