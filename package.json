@@ -8,7 +8,9 @@
   "description": "pure node js for posting information into db",
   "main": "app.js",
   "devDependencies": {},
+  
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Karthik",

@@ -27,13 +27,7 @@ var init = (request, response) => {
         }else{
             apiResponse(200, 'fare', response);
         }
-    }else
-      if(request.method == 'GET'){
-        if(request.url ='/getTable')
-            getTableData(request, response);
-        else
-            apiResponse(200, 'fare', response);
-    }else {
+    }else{
         apiResponse(200, 'fare', response);
     }
 };
@@ -59,8 +53,13 @@ var insert = (request, response) => {
             apiResponse(400, "Please check your payload", response);
         }
     }); // on data event, for parse body payloads
-    response.on('error', error => {
-        apiResponse(400, "Something wrong with payload", response);
+    request.on('error', error => {
+        apiResponse(400, "Something wrong with the payload", response);
+    });
+    request.on('end', () => {
+        if(!data.length){
+            apiResponse(400, "Something wrong with the payload", response);
+        }
     });
 }
 
@@ -100,6 +99,8 @@ function getCurrentTimeStamp(){
     return new Date().toISOString();
 }
 
+
+//Validation on payload
 function formCollectionData(body){
     let collection = [];
     if(body instanceof Array){
