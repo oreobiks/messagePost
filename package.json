@@ -1,7 +1,7 @@
 {
   "name": "messagepostapp",
   "dependencies": {
-    "knex": "^0.15.2",
+    "knex": "^0.20.9",
     "pg": "^7.6.0"
   },
   "version": "1.0.0",
