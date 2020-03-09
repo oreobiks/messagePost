@@ -2,7 +2,6 @@
 const http = require('http');
 const knex = require('knex')({
     client: 'pg',
-    connection: 'postgres://uqodmdzt:iSXHFi2ct0gx6x1uuPJMh7y3ew1WJqcn@pellefant.db.elephantsql.com:5432/uqodmdzt',
     version: '10.4'
 });
 
